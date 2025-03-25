@@ -1,6 +1,4 @@
 const App = () => {
-  return (
-    <>App</>
-  )
-}
-export default App
+  return <>App</>;
+};
+export default App;
