@@ -8,7 +8,7 @@ const Accommodation = () => {
     <div className={styles.accommodation}>
       <Container>
         <div className={styles.accommodation__container}>
-          <SectionTitle>Размещение в лагере</SectionTitle>
+          <SectionTitle side="left">Размещение в лагере</SectionTitle>
 
           <div className={styles.accommodation__paragraphs}>
             <p>
