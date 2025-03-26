@@ -1,13 +1,20 @@
 .container {
-  width: fit-content;
   padding-bottom: 60px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+
   gap: 20px;
 
   & h2 {
     font-size: var(--h2-size);
   }
+}
+
+.left {
+  justify-content: start;
+}
+
+.right {
+  justify-content: end;
 }
