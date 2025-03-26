@@ -2,6 +2,15 @@
 
 :root {
   --text-color: #303749;
+
+  // font sizes
+  --h1-size: 74px;
+  --h2-size: 44px;
+  --h3-size: 30px;
+  --h4-size: 26px;
+  --h5-size: 22px;
+  --h6-size: 18px; // regular
+  --small-size: 14px;
 }
 
 * {
@@ -10,9 +19,11 @@
   box-sizing: border-box;
 
   font-family: "Raleway";
+  font-size: var(--h6-size);
   color: var(--text-color);
 }
 
 html {
   background-color: #fef9ed;
+  scroll-behavior: smooth;
 }
