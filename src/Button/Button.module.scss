@@ -1,0 +1,31 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  font-size: var(--h5-size);
+  border-radius: 10px;
+
+  padding: 20px 50px;
+
+  cursor: pointer;
+}
+
+.primary {
+  background: var(--text-color);
+  color: #fef9ed;
+}
+
+.secondary {
+  background: #fef9ed;
+}
+
+.link {
+  text-decoration: none;
+  transition: 200ms all;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
