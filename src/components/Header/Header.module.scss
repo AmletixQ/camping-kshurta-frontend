@@ -1,0 +1,33 @@
+.header {
+  padding: 30px 0 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__anchors {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    a {
+      text-decoration: none;
+      transition: all 200ms;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__phonenumber {
+    font-size: 22px;
+    font-family: "Inter";
+    line-height: 180%;
+  }
+}
