@@ -6,6 +6,7 @@ import Accommodation from "./sections/Accommodation/Accommodation";
 import Moments from "./sections/Moments/Moments";
 import Conditions from "./sections/Conditions/Conditions";
 import Gallery from "./sections/Gallery/Gallery";
+import Rules from "./sections/Rules/Rules";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Moments />
         <Conditions />
         <Gallery />
+        <Rules />
       </main>
     </>
   );
