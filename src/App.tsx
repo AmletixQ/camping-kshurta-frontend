@@ -4,6 +4,7 @@ import styles from "./App.module.scss";
 import AboutUs from "./sections/AboutUs/AboutUs";
 import Accommodation from "./sections/Accommodation/Accommodation";
 import Moments from "./sections/Moments/Moments";
+import Conditions from "./sections/Conditions/Conditions";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Accommodation />
 
         <Moments />
+        <Conditions />
       </main>
     </>
   );
