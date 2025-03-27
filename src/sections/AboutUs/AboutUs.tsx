@@ -1,4 +1,4 @@
-import Button from "../../Button/Button";
+import Button from "../../components/Button/Button";
 import Container from "../../components/Container/Container";
 import styles from "./AboutUs.module.scss";
 

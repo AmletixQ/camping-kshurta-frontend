@@ -13,12 +13,12 @@
 }
 
 .primary {
-  background: var(--text-color);
-  color: #fef9ed;
+  background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .secondary {
-  background: #fef9ed;
+  background: var(--secondary-color);
 }
 
 .link {

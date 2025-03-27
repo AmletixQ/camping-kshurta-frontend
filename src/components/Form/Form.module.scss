@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    padding: 10px 24px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+
+    & label {
+      font-size: var(--small-size);
+    }
+  }
+}
