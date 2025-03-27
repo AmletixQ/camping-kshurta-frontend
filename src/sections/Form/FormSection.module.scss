@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+
+  padding-bottom: 150px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & h2 {
+      font-size: var(--h2-size);
+    }
+
+    & p {
+      font-size: var(--h4-size);
+    }
+  }
+}
