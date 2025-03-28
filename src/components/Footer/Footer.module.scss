@@ -45,12 +45,19 @@
       align-items: end;
       gap: 6px;
     }
-    
-    h5, &_item h5 {
+
+    a,
+    h5,
+    &_item h5 {
       font-family: "Inter";
       font-size: var(--h5-size);
       font-weight: 300;
       line-height: 90%;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   }
 }

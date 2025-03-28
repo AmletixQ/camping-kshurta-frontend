@@ -40,7 +40,7 @@ const Footer = () => {
                 <h5>ООО «Компания»</h5>
                 <h5>г. Владикавказ, ул. Проспект Коста, 34</h5>
               </div>
-              <h5>kshurta.info@gmail.com</h5>
+              <a href="mailto:kshurta.info@gmail.com">kshurta.info@gmail.com</a>
             </div>
           </div>
         </div>
