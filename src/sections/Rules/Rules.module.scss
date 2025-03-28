@@ -12,7 +12,7 @@
       flex-flow: row-reverse;
 
       & div {
-        background-color: #6c943c;
+        background-color: var(--tertiary--color);
       }
     }
   }
