@@ -1,0 +1,56 @@
+.footer {
+  padding: 70px 0 50px 0;
+  border-top: 2px solid var(--tertiary--color);
+
+  &__container {
+    display: flex;
+    gap: 200px;
+  }
+
+  &__box {
+    display: flex;
+    gap: 130px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    a {
+      font-size: var(--h5-size);
+      text-decoration: none;
+
+      transition: 200ms all;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &_item {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &_item div {
+      display: flex;
+      align-items: end;
+      gap: 6px;
+    }
+    
+    h5, &_item h5 {
+      font-family: "Inter";
+      font-size: var(--h5-size);
+      font-weight: 300;
+      line-height: 90%;
+    }
+  }
+}

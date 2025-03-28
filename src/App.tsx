@@ -8,6 +8,7 @@ import Rules from "./sections/Rules/Rules";
 import FormSection from "./sections/Form/FormSection";
 
 import styles from "./App.module.scss";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
         <Rules />
         <FormSection />
       </main>
+
+      <Footer />
     </>
   );
 };
