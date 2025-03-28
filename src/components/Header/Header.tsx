@@ -1,23 +1,12 @@
 import Container from "../Container/Container";
 import Instagram from "../icons/Instagram/Instagram";
 import Logo from "../icons/Logo/Logo";
+
+import { anchors } from "../../constants/anchors";
+
 import styles from "./Header.module.scss";
 
-type TAnchor = {
-  title: string;
-  href: string;
-};
-
 const Header = () => {
-  const anchors: TAnchor[] = [
-    { title: "О нас", href: "#about" },
-    { title: "Досуг и развлечения", href: "#entertainment" },
-    { title: "Условия", href: "#conditions" },
-    { title: "Палатки", href: "#tents" },
-    { title: "Галерея", href: "#gallery" },
-    { title: "Правила", href: "#rules" },
-  ];
-
   return (
     <Container>
       <div className={styles.header}>
