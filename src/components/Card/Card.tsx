@@ -1,10 +1,7 @@
 import { FC } from "react";
 import styles from "./Card.module.scss";
 
-export interface ICard {
-  title: string;
-  description: string;
-}
+import { ICard } from "../../types/card.interface";
 
 const Card: FC<ICard> = ({ title, description }) => {
   return (
