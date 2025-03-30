@@ -20,11 +20,14 @@
     align-items: center;
     justify-content: space-between;
 
+    cursor: pointer;
+
     & h3 {
       font-size: var(--h3-size);
     }
   }
 
+  &__box,
   &__button {
     background: transparent;
     border: none;
@@ -38,7 +41,8 @@
     max-height: 0;
     overflow: hidden;
 
-    transition: max-height 200ms ease, opacity 200ms ease, padding-top 200ms ease;
+    transition: max-height 200ms ease, opacity 200ms ease,
+      padding-top 200ms ease;
   }
 
   &.opened &__description {

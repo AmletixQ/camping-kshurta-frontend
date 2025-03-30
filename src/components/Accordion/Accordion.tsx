@@ -17,15 +17,14 @@ const Accordion: FC<IAccordionProps> = ({ title, description }) => {
     <div className={styles.accordion + " " + (open ? styles.opened : "")}>
       <Container>
         <div className={styles.accordion__container}>
-          <div className={styles.accordion__title}>
+          <div
+            className={styles.accordion__title}
+            onClick={() => setOpen((prev) => !prev)}
+          >
             <h3>{title}</h3>
-
-            <button
-              className={styles.accordion__button}
-              onClick={() => setOpen((prev) => !prev)}
-            >
+            <div className={styles.accordion__button}>
               <Arrow />
-            </button>
+            </div>
           </div>
           <p className={styles.accordion__description}>{description}</p>
         </div>
