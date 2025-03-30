@@ -3,6 +3,8 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 import styles from "./Accommodation.module.scss";
 
+import image from "/images/accommodation.png";
+
 const Accommodation = () => {
   return (
     <div className={styles.accommodation}>
@@ -29,7 +31,7 @@ const Accommodation = () => {
       </Container>
 
       <img
-        src="/images/accommodation.png"
+        src={image}
         alt="Man with cup"
         className={styles.accommodation__image}
       />

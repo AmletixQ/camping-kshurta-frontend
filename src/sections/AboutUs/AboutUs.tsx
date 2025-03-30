@@ -2,14 +2,16 @@ import Button from "../../components/Button/Button";
 import Container from "../../components/Container/Container";
 import styles from "./AboutUs.module.scss";
 
+import image from "/images/aboutUs.png";
+
 const AboutUs = () => {
   return (
     <Container>
       <div className={styles.aboutUs}>
         <img
           className={styles.aboutUs__image}
-          src="/images/aboutUs.png"
-          alt=""
+          src={image}
+          alt="beautiful image"
         />
         <div className={styles.aboutUs__content}>
           <div className={styles.aboutUs__content__typography}>
@@ -29,4 +31,5 @@ const AboutUs = () => {
     </Container>
   );
 };
+
 export default AboutUs;

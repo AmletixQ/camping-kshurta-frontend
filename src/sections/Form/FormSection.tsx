@@ -3,6 +3,8 @@ import Form from "../../components/Form/Form";
 
 import styles from "./FormSection.module.scss";
 
+import image from "/images/form-image.png";
+
 const FormSection = () => {
   return (
     <Container side="right">
@@ -17,7 +19,7 @@ const FormSection = () => {
 
           <Form />
         </div>
-        <img src="/images/form-image.png" alt="" />
+        <img src={image} alt="" />
       </div>
     </Container>
   );
