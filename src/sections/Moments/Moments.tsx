@@ -1,6 +1,8 @@
 import Button from "../../components/Button/Button";
 import styles from "./Moments.module.scss";
 
+import image from "/images/moments.png";
+
 const Moments = () => {
   return (
     <div className={styles.moments}>
@@ -18,11 +20,7 @@ const Moments = () => {
           Забронировать место
         </Button>
       </div>
-      <img
-        className={styles.moments__image}
-        src="/images/moments.png"
-        alt="moments"
-      />
+      <img className={styles.moments__image} src={image} alt="moments" />
     </div>
   );
 };
