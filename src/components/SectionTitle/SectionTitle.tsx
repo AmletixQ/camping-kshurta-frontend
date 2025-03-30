@@ -9,6 +9,7 @@ const title = cva(styles.container, {
     side: {
       left: styles.left,
       right: styles.right,
+      center: styles.center,
     },
   },
 });
