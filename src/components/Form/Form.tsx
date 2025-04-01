@@ -1,21 +1,44 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
+import { axiosInstance } from "../../configs/axios.instance";
+
 import Input from "../../components/Input/Input";
-import Button from "../Button/Button";
+import PhoneInput from "../PhoneInput/PhoneInput";
 
 import styles from "./Form.module.scss";
-import PhoneInput from "../PhoneInput/PhoneInput";
 
 const Form = () => {
   const [data, setData] = useState({
-    name: "",
+    fullname: "",
     phonenumber: "",
   });
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    if (!data.fullname || !data.phonenumber) return;
+
+    const { data: result } = await axiosInstance.post("applications", {
+      data,
+    });
+
+    setData({ fullname: "", phonenumber: "" });
+
+    console.log(result);
+  };
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.form__inputs}>
         <div className={styles.form__input_container}>
           <label htmlFor="name">Имя</label>
-          <Input id="name" placeholder="Иван Иванов" />
+          <Input
+            id="name"
+            placeholder="Иван Иванов"
+            value={data.fullname}
+            onChange={(e) =>
+              setData((prev) => ({ ...prev, fullname: e.target.value }))
+            }
+          />
         </div>
 
         <div className={styles.form__input_container}>
@@ -27,7 +50,7 @@ const Form = () => {
         </div>
       </div>
 
-      <Button color="primary">Оставить заявку</Button>
+      <button className={styles.form__button}>Оставить заявку</button>
     </form>
   );
 };
