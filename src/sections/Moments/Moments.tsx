@@ -1,4 +1,4 @@
-import Button from "../../components/Button/Button";
+import AnchorLink from "../../components/AnchorLink/AnchorLink";
 import styles from "./Moments.module.scss";
 
 import image from "/images/moments.png";
@@ -16,9 +16,9 @@ const Moments = () => {
           </p>
         </div>
 
-        <Button color="secondary" role="link">
+        <AnchorLink color="secondary" role="link">
           Забронировать место
-        </Button>
+        </AnchorLink>
       </div>
       <img className={styles.moments__image} src={image} alt="moments" />
     </div>

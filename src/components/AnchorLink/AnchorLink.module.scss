@@ -1,15 +1,23 @@
-.button {
+.anchor {
   display: flex;
   align-items: center;
   justify-content: center;
 
   width: fit-content;
   font-size: var(--h5-size);
+
   border-radius: 10px;
 
   padding: 20px 50px;
-
   cursor: pointer;
+
+  text-decoration: none;
+
+  transition: 200ms all;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .primary {
@@ -19,13 +27,4 @@
 
 .secondary {
   background: var(--secondary-color);
-}
-
-.link {
-  text-decoration: none;
-  transition: 200ms all;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

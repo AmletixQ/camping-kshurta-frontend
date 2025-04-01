@@ -1,4 +1,4 @@
-import Button from "../../components/Button/Button";
+import AnchorLink from "../../components/AnchorLink/AnchorLink";
 import Container from "../../components/Container/Container";
 import styles from "./AboutUs.module.scss";
 
@@ -25,7 +25,7 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <Button color="primary">Забронировать место</Button>
+          <AnchorLink color="primary">Забронировать место</AnchorLink>
         </div>
       </div>
     </Container>
