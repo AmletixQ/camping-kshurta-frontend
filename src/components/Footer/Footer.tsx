@@ -38,7 +38,6 @@ const Footer = () => {
           </div>
           <div className={styles.footer__content}>
             <div className={styles.footer__content_item}>
-              <h5>ООО «Компания»</h5>
               <h5>г. Владикавказ, ул. Проспект Коста, 34</h5>
             </div>
             <a href="mailto:kshurta.info@gmail.com">kshurta.info@gmail.com</a>

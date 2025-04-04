@@ -7,7 +7,7 @@ import styles from "./Conditions.module.scss";
 
 const Conditions = () => {
   return (
-    <Container>
+    <Container id="tents">
       <SectionTitle side="left">Комфортные условия</SectionTitle>
       <div className={styles.cards}>
         {cards.map((card, index) => (

@@ -5,7 +5,7 @@
 .menu {
   position: fixed;
   padding: 50px 0 0 0;
-  background-color: var(--secondary-color);
+  background-color: #fff;
 
   top: 0;
   right: -110%;
@@ -14,7 +14,7 @@
   width: 100vw;
   height: 100vh;
 
-  transition: right 0.5s ease-in-out;
+  transition: right 0.3s ease-in-out;
 
   &__button,
   &__close {
@@ -22,6 +22,10 @@
     border: none;
     width: fit-content;
     height: fit-content;
+  }
+
+  &__button {
+    display: none;
   }
 
   &__content {
@@ -61,5 +65,11 @@
   &__box {
     display: flex;
     justify-content: end;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__button {
+      display: block;
+    }
   }
 }
