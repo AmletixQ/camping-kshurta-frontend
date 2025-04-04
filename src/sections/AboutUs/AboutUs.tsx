@@ -6,7 +6,7 @@ import image from "/images/aboutUs.png";
 
 const AboutUs = () => {
   return (
-    <Container>
+    <Container id={"about-us"}>
       <div className={styles.aboutUs}>
         <img
           className={styles.aboutUs__image}

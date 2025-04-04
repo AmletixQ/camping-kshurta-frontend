@@ -3,7 +3,7 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 import styles from "./Accommodation.module.scss";
 
-import image from "/images/accommodation.png";
+// import image from "/images/accommodation.png";
 
 const Accommodation = () => {
   return (
@@ -30,11 +30,10 @@ const Accommodation = () => {
         </div>
       </Container>
 
-      <img
-        src={image}
+      {/* <img src={image}
         alt="Man with cup"
         className={styles.accommodation__image}
-      />
+      /> */}
     </div>
   );
 };

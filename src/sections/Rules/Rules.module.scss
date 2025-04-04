@@ -1,5 +1,5 @@
 .rules {
-  padding-bottom: 150px;
+  padding-bottom: var(--section-gap);
 
   &__container {
     display: flex;
@@ -12,7 +12,7 @@
       flex-flow: row-reverse;
 
       & div {
-        background-color: var(--tertiary--color);
+        background-color: var(--tertiary-color);
       }
     }
   }
@@ -46,6 +46,40 @@
 
     & p {
       line-height: 180%;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    &__container {
+      flex-direction: column !important;
+    }
+
+    &__content {
+      padding: 90px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    &__content {
+      padding: 80px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__content {
+      padding: 60px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    &__content {
+      padding: 40px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    &__content {
+      padding: 24px;
     }
   }
 }

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 
 import Container from "../Container/Container";
-import Arrow from "../icons/Arrow";
+import Arrow from "../icons/Arrow/Arrow";
 
 import styles from "./Accordion.module.scss";
 

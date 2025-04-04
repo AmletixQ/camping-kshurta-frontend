@@ -5,6 +5,7 @@ import Logo from "../icons/Logo/Logo";
 import { anchors } from "../../constants/anchors";
 
 import styles from "./Header.module.scss";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Header = () => {
   return (
@@ -23,6 +24,8 @@ const Header = () => {
           <p className={styles.header__phonenumber}>+7 900 800 00 00</p>
           <Instagram />
         </div>
+
+        <BurgerMenu />
       </div>
     </Container>
   );

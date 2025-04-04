@@ -1,6 +1,9 @@
+import styles from "./Hill.module.scss";
+
 const Hill = () => {
   return (
     <svg
+      className={styles.hills}
       width="38"
       height="32"
       viewBox="0 0 38 32"

@@ -4,5 +4,9 @@
   align-items: center;
   gap: 40px;
 
-  padding-bottom: 150px;
+  padding-bottom: var(--section-gap);
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
 }

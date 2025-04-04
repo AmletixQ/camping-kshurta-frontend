@@ -7,7 +7,7 @@ import styles from "./Entertainment.module.scss";
 
 const Entertainment = () => {
   return (
-    <div className={styles.entertainment}>
+    <div className={styles.entertainment} id="entertainment">
       <Container>
         <SectionTitle side="right">Досуг и развлечения</SectionTitle>
       </Container>

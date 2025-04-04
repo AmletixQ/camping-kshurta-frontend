@@ -1,0 +1,30 @@
+.closed {
+  display: none;
+}
+
+.opened {
+  display: block;
+}
+
+.menu {
+  display: none;
+  
+  &__button {
+    background: none;
+    border: none;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__container {
+  }
+
+  &__box {
+    display: flex;
+    justify-content: end;
+  }
+
+  @media screen and (max-width: 1000px) {
+    display: block;
+  }
+}

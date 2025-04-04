@@ -30,4 +30,11 @@
     font-family: "Inter";
     line-height: 180%;
   }
+
+  @media screen and (max-width: 1000px) {
+    &__anchors,
+    &__contacts {
+      display: none;
+    }
+  }
 }
