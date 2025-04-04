@@ -16,10 +16,17 @@ const container = cva(styles.container, {
   },
 });
 
-const Container: FC<PropsWithChildren & VariantProps<typeof container>> = ({
-  children,
-  side,
-}) => {
-  return <div className={container({ side })}>{children}</div>;
+interface IContainerProps
+  extends PropsWithChildren,
+    VariantProps<typeof container> {
+  id?: string;
+}
+
+const Container: FC<IContainerProps> = ({ children, side, id }) => {
+  return (
+    <div id={id} className={container({ side })}>
+      {children}
+    </div>
+  );
 };
 export default Container;

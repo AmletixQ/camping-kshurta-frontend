@@ -9,19 +9,19 @@ import styles from "./Form.module.scss";
 const Form = () => {
   const [data, setData] = useState({
     fullname: "",
-    phonenumber: "",
+    phoneNumber: "",
   });
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (!data.fullname || !data.phonenumber) return;
+    if (!data.fullname || !data.phoneNumber) return;
 
     const { data: result } = await axiosInstance.post("applications", {
-      data,
+      ...data,
     });
 
-    setData({ fullname: "", phonenumber: "" });
+    setData({ fullname: "", phoneNumber: "" });
 
     console.log(result);
   };
@@ -44,8 +44,10 @@ const Form = () => {
         <div className={styles.form__input_container}>
           <label htmlFor="phonenumber">Телефон</label>
           <PhoneInput
-            value={data.phonenumber}
-            onChange={(phonenumber) => setData({ ...data, phonenumber })}
+            value={data.phoneNumber}
+            onChange={(phonenumber) =>
+              setData({ ...data, phoneNumber: phonenumber })
+            }
           />
         </div>
       </div>

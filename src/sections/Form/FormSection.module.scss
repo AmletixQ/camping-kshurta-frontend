@@ -1,12 +1,15 @@
 .form {
-  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   gap: 40px;
 
-  padding-bottom: 150px;
+  padding-bottom: var(--section-gap);
+
+  & img {
+    width: 70%;
+  }
 
   &__container {
     display: flex;
@@ -25,6 +28,20 @@
 
     & p {
       font-size: var(--h4-size);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+
+    &__container {
+      text-align: center;
+      align-items: center;
+    }
+
+    & img {
+      width: 100%;
+      border-radius: 10px;
     }
   }
 }

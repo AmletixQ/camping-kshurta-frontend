@@ -16,9 +16,7 @@ const Moments = () => {
           </p>
         </div>
 
-        <AnchorLink color="secondary" role="link">
-          Забронировать место
-        </AnchorLink>
+        <AnchorLink color="secondary">Забронировать место</AnchorLink>
       </div>
       <img className={styles.moments__image} src={image} alt="moments" />
     </div>

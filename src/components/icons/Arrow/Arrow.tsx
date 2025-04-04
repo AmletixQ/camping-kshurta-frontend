@@ -1,6 +1,9 @@
+import styles from "./Arrow.module.scss";
+
 const Arrow = () => {
   return (
     <svg
+      className={styles.arrow}
       width="36"
       height="36"
       viewBox="0 0 36 36"

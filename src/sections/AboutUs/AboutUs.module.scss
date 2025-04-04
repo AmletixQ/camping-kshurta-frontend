@@ -2,7 +2,11 @@
   display: flex;
   gap: 40px;
 
-  padding-bottom: 150px;
+  padding-bottom: var(--section-gap);
+
+  &__image {
+    border-radius: 10px;
+  }
 
   &__content {
     display: flex;
@@ -23,6 +27,21 @@
       display: flex;
       flex-direction: column;
       gap: 22px;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    flex-direction: column;
+    gap: 20px;
+
+    &__content {
+      align-items: center;
+      text-align: center;
+      gap: 40px;
+
+      &__typography {
+        gap: 10px;
+      }
     }
   }
 }

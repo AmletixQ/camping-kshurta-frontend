@@ -6,7 +6,7 @@ import secondImage from "/images/rules/second.png";
 
 const Rules = () => {
   return (
-    <div className={styles.rules}>
+    <div className={styles.rules} id="rules">
       <div className={styles.rules__container}>
         <div className={styles.rules__content}>
           <h2>Что с собой брать?</h2>

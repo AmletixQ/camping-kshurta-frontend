@@ -1,5 +1,5 @@
 .container {
-  max-width: 1720px;
+  max-width: calc(100vw - 2 * var(--section-padding));
   width: 100%;
 }
 
@@ -9,10 +9,20 @@
 
 .left {
   max-width: fit-content;
-  margin: 0 100px 0 0;
+  margin: 0 auto 0 0;
+
+  @media screen and (max-width: 500px) {
+    margin: 0 auto !important;
+    padding: 0 var(--section-padding);
+  }
 }
 
 .right {
   max-width: fit-content;
-  margin: 0 0 0 100px;
+  margin: 0 0 0 auto;
+
+  @media screen and (max-width: 500px) {
+    margin: 0 auto !important;
+    padding: 0 var(--section-padding);
+  }
 }
