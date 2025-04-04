@@ -51,7 +51,7 @@
 
   @media screen and (max-width: 1400px) {
     &__container {
-      flex-direction: column !important;
+      flex-direction: column-reverse !important;
     }
 
     &__content {
@@ -79,7 +79,7 @@
 
   @media screen and (max-width: 400px) {
     &__content {
-      padding: 24px;
+      padding: 30px 24px;
     }
   }
 }

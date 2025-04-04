@@ -5,7 +5,7 @@
 .menu {
   position: fixed;
   padding: 50px 0 0 0;
-  background-color: var(--secondary-color);
+  background-color: #fff;
 
   top: 0;
   right: -110%;
@@ -14,7 +14,7 @@
   width: 100vw;
   height: 100vh;
 
-  transition: right 0.5s ease-in-out;
+  transition: right 0.3s ease-in-out;
 
   &__button,
   &__close {

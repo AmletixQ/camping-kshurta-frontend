@@ -40,4 +40,17 @@
       background-size: cover;
     }
   }
+
+  @media screen and (max-width: 1000px) {
+    height: 441px;
+
+    & p {
+      font-size: var(--h6-size);
+    }
+
+    &__content {
+      padding: 20px;
+      gap: 14px;
+    }
+  }
 }

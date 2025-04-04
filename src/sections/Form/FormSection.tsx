@@ -7,7 +7,7 @@ import image from "/images/form-image.png";
 
 const FormSection = () => {
   return (
-    <Container side="right">
+    <Container className={styles.container} id="form">
       <div className={styles.form} id="form">
         <div className={styles.form__container}>
           <div className={styles.form__box}>
