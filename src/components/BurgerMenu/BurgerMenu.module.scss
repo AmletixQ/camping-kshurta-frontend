@@ -24,6 +24,10 @@
     height: fit-content;
   }
 
+  &__button {
+    display: none;
+  }
+
   &__content {
     padding-top: 30px;
 
@@ -61,5 +65,11 @@
   &__box {
     display: flex;
     justify-content: end;
+  }
+
+  @media screen and (max-width: 1000px) {
+    &__button {
+      display: block;
+    }
   }
 }
