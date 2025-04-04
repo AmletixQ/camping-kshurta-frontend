@@ -1,30 +1,14 @@
 import { FC, PropsWithChildren } from "react";
 import styles from "./Container.module.scss";
-import { cva, VariantProps } from "class-variance-authority";
 
-const container = cva(styles.container, {
-  variants: {
-    side: {
-      left: styles.left,
-      right: styles.right,
-      center: styles.center,
-    },
-  },
-
-  defaultVariants: {
-    side: "center",
-  },
-});
-
-interface IContainerProps
-  extends PropsWithChildren,
-    VariantProps<typeof container> {
+interface IContainerProps extends PropsWithChildren {
   id?: string;
+  className?: string;
 }
 
-const Container: FC<IContainerProps> = ({ children, side, id }) => {
+const Container: FC<IContainerProps> = ({ children, id, className }) => {
   return (
-    <div id={id} className={container({ side })}>
+    <div id={id} className={`${styles.container} ${className}`}>
       {children}
     </div>
   );
