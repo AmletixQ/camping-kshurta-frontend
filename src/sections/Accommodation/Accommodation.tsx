@@ -3,14 +3,14 @@ import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 import styles from "./Accommodation.module.scss";
 
-// import image from "/images/accommodation.png";
+import image from "/images/accommodation.png";
 
 const Accommodation = () => {
   return (
-    <div className={styles.accommodation}>
-      <Container>
+    <Container>
+      <div className={styles.accommodation}>
         <div className={styles.accommodation__container}>
-          <SectionTitle side="left">Размещение в лагере</SectionTitle>
+          <SectionTitle>Размещение в лагере</SectionTitle>
 
           <div className={styles.accommodation__paragraphs}>
             <p>
@@ -28,13 +28,13 @@ const Accommodation = () => {
             </p>
           </div>
         </div>
-      </Container>
-
-      {/* <img src={image}
-        alt="Man with cup"
-        className={styles.accommodation__image}
-      /> */}
-    </div>
+        <img
+          src={image}
+          alt="Man with cup"
+          className={styles.accommodation__image}
+        />
+      </div>
+    </Container>
   );
 };
 export default Accommodation;

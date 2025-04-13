@@ -9,7 +9,7 @@ const Entertainment = () => {
   return (
     <div className={styles.entertainment} id="entertainment">
       <Container>
-        <SectionTitle side="right">Досуг и развлечения</SectionTitle>
+        <SectionTitle>Досуг и развлечения</SectionTitle>
       </Container>
       <div className={styles.entertainment__container}>
         {accordions.map((accordion, index) => (

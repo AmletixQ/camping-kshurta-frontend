@@ -1,6 +1,4 @@
 .container {
-  padding-right: 0;
-
   @media screen and (max-width: 1000px) {
     padding: 0 var(--section-padding);
   }
@@ -17,6 +15,7 @@
 
   & img {
     width: 70%;
+    border-radius: 10px;
   }
 
   &__container {

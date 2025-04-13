@@ -13,10 +13,18 @@
 
   text-decoration: none;
 
-  transition: 200ms all;
+  transition: 100ms all;
 
-  &:hover {
-    text-decoration: underline;
+  &:hover.secondary {
+    background-color: #fff3d8;
+  }
+
+  &:hover.primary {
+    background-color: #1e2436;
+  }
+
+  @media screen and (max-width: 1600px) {
+    padding: 16px 50px;
   }
 }
 
