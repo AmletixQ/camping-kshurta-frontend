@@ -1,26 +1,14 @@
 import { AnchorHTMLAttributes, FC } from "react";
-import { cva, VariantProps } from "class-variance-authority";
 
 import styles from "./AnchorLink.module.scss";
 
-const anchor = cva(styles.anchor, {
-  variants: {
-    color: {
-      primary: styles.primary,
-      secondary: styles.secondary,
-    },
-    role: {
-      link: styles.link,
-    },
-  },
-  defaultVariants: {
-    color: "primary",
-  },
-});
+interface IAnchorLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  isSecondary?: boolean;
+}
 
-const AnchorLink: FC<
-  VariantProps<typeof anchor> & AnchorHTMLAttributes<HTMLAnchorElement>
-> = ({ color, ...props }) => {
-  return <a {...props} href="#form" className={anchor({ color })} />;
+const AnchorLink: FC<IAnchorLink> = (props) => {
+  const type = props.isSecondary ? styles.secondary : styles.primary;
+
+  return <a {...props} href="#form" className={`${styles.anchor} ${type}`} />;
 };
 export default AnchorLink;

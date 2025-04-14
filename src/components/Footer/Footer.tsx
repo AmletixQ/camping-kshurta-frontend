@@ -30,7 +30,7 @@ const Footer = () => {
             <div className={styles.footer__content_item}>
               <h5>Администратор лагеря</h5>
               <div>
-                <h5>+7-909-475-59-13</h5>
+                <a href="tel:+79094755913">+7-909-475-59-13</a>
                 <SmallText>(Наталья)</SmallText>
               </div>
             </div>
