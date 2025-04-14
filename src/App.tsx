@@ -1,22 +1,26 @@
-import Header from "./components/Header/Header";
-import AboutUs from "./sections/AboutUs/AboutUs";
-import Accommodation from "./sections/Accommodation/Accommodation";
-import Moments from "./sections/Moments/Moments";
-import Conditions from "./sections/Conditions/Conditions";
-import Gallery from "./sections/Gallery/Gallery";
-import Rules from "./sections/Rules/Rules";
-import FormSection from "./sections/Form/FormSection";
-import Entertainment from "./sections/Entertainment/Entertainment";
-import Footer from "./components/Footer/Footer";
+import { lazy } from "react";
 
-import styles from "./App.module.scss";
+const importComponent = (path: string) => {
+  return lazy(() => import(path));
+};
+
+const Header = importComponent("./components/Header/Header");
+const AboutUs = importComponent("./sections/AboutUs/AboutUs");
+const Accommodation = importComponent("./sections/Accommodation/Accommodation");
+const Moments = importComponent("./sections/Moments/Moments");
+const Conditions = importComponent("./sections/Conditions/Conditions");
+const Gallery = importComponent("./sections/Gallery/Gallery");
+const Rules = importComponent("./sections/Rules/Rules");
+const FormSection = importComponent("./sections/Form/FormSection");
+const Entertainment = importComponent("./sections/Entertainment/Entertainment");
+const Footer = importComponent("./components/Footer/Footer");
 
 const App = () => {
   return (
     <>
       <Header />
 
-      <main className={styles.app}>
+      <main>
         <AboutUs />
         <Accommodation />
         <Entertainment />
