@@ -56,9 +56,14 @@
     align-items: center;
     gap: 20px;
 
-    & p {
+    & a {
       font-family: "Inter";
       font-size: var(--h5-size);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
