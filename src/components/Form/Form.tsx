@@ -1,5 +1,4 @@
 import { FormEvent, useState } from "react";
-import { axiosInstance } from "../../configs/axios.instance";
 
 import Input from "../../components/Input/Input";
 import PhoneInput from "../PhoneInput/PhoneInput";
@@ -17,13 +16,16 @@ const Form = () => {
 
     if (!data.fullname || !data.phoneNumber) return;
 
-    const { data: result } = await axiosInstance.post("applications", {
-      ...data,
+    const formData = new FormData();
+    formData.append("fullname", data.fullname);
+    formData.append("phoneNumber", data.phoneNumber);
+
+    await fetch("send.php", {
+      method: "POST",
+      body: formData,
     });
 
     setData({ fullname: "", phoneNumber: "" });
-
-    console.log(result);
   };
 
   return (
@@ -38,6 +40,7 @@ const Form = () => {
             onChange={(e) =>
               setData((prev) => ({ ...prev, fullname: e.target.value }))
             }
+            required
           />
         </div>
 

@@ -37,11 +37,11 @@ const PhoneInput: FC<IPhoneInputProps> = ({ value, onChange, ...props }) => {
     <Input
       id="phonenumber"
       placeholder="+7 900 800 00 00"
-      font="number"
       type="text"
       value={value}
       onChange={handleChange}
       {...props}
+      required
     />
   );
 };
