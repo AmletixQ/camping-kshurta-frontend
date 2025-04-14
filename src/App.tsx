@@ -1,19 +1,19 @@
 import { lazy } from "react";
 
-const importComponent = (path: string) => {
-  return lazy(() => import(path));
-};
-
-const Header = importComponent("./components/Header/Header");
-const AboutUs = importComponent("./sections/AboutUs/AboutUs");
-const Accommodation = importComponent("./sections/Accommodation/Accommodation");
-const Moments = importComponent("./sections/Moments/Moments");
-const Conditions = importComponent("./sections/Conditions/Conditions");
-const Gallery = importComponent("./sections/Gallery/Gallery");
-const Rules = importComponent("./sections/Rules/Rules");
-const FormSection = importComponent("./sections/Form/FormSection");
-const Entertainment = importComponent("./sections/Entertainment/Entertainment");
-const Footer = importComponent("./components/Footer/Footer");
+const Header = lazy(() => import("./components/Header/Header"));
+const AboutUs = lazy(() => import("./sections/AboutUs/AboutUs"));
+const Accommodation = lazy(
+  () => import("./sections/Accommodation/Accommodation")
+);
+const Moments = lazy(() => import("./sections/Moments/Moments"));
+const Conditions = lazy(() => import("./sections/Conditions/Conditions"));
+const Gallery = lazy(() => import("./sections/Gallery/Gallery"));
+const Rules = lazy(() => import("./sections/Rules/Rules"));
+const FormSection = lazy(() => import("./sections/Form/FormSection"));
+const Entertainment = lazy(
+  () => import("./sections/Entertainment/Entertainment")
+);
+const Footer = lazy(() => import("./components/Footer/Footer"));
 
 const App = () => {
   return (
