@@ -35,7 +35,7 @@ const BurgerMenu = () => {
               ))}
             </div>
             <div className={styles.menu__contacts}>
-              <a href="tel:+79008000000">+7 900 800 00 00</a>
+              <a href="tel:+79094755913"> +7 909 475 59 13</a>
               <Instagram />
             </div>
           </div>

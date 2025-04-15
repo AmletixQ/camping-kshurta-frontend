@@ -21,8 +21,8 @@ const Header = () => {
           ))}
         </div>
         <div className={styles.header__contacts}>
-          <a href="tel:+79008000000" className={styles.header__phonenumber}>
-            +7 900 800 00 00
+          <a href="tel:+79094755913" className={styles.header__phonenumber}>
+            +7 909 475 59 13
           </a>
           <Instagram />
         </div>
