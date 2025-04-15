@@ -49,17 +49,15 @@ const Form = () => {
           }
           required
         />
-        <div>
-          <Input
-            type="tel"
-            label="Телефон"
-            htmlFor="phone"
-            placeholder="+7 900 800 00 00"
-            value={data.phoneNumber}
-            onChange={(e) => handlePhoneNumberChange(e)}
-            required
-          />
-        </div>
+        <Input
+          type="tel"
+          label="Телефон"
+          htmlFor="phone"
+          placeholder="+7 900 800 00 00"
+          value={data.phoneNumber}
+          onChange={(e) => handlePhoneNumberChange(e)}
+          required
+        />
       </div>
 
       <button className={styles.form__button}>Оставить заявку</button>
