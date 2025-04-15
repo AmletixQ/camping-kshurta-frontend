@@ -1,7 +1,17 @@
 import { FC, InputHTMLAttributes } from "react";
 import styles from "./Input.module.scss";
 
-const Input: FC<InputHTMLAttributes<HTMLInputElement>> = (props) => {
-  return <input {...props} className={styles.input} />;
+interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+  htmlFor: string;
+}
+
+const Input: FC<IInputProps> = ({ label, htmlFor, ...props }) => {
+  return (
+    <div className={styles.input}>
+      <label htmlFor={htmlFor}>{label}</label>
+      <input id={htmlFor} {...props} />
+    </div>
+  );
 };
 export default Input;
