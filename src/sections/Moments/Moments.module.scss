@@ -67,6 +67,12 @@
       width: 100%;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    &__container {
+      padding: var(--section-padding);
+    }
+  }
 }
 
 .container {

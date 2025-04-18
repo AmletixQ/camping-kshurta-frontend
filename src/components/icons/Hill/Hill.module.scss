@@ -1,5 +1,6 @@
 .hills {
-  @media screen  {
-    
+  @media screen and (max-width: 800px) {
+    width: 32px;
+    height: 27px;
   }
 }

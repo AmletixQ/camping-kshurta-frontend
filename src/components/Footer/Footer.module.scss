@@ -1,3 +1,24 @@
+@mixin underline {
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    transition: 0.4s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
 .footer {
   padding: 70px 0 50px 0;
   border-top: 2px solid var(--tertiary-color);
@@ -12,17 +33,11 @@
   &__links {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 16px;
 
-    a {
+    & a {
       font-size: var(--h5-size);
-      text-decoration: none;
-
-      transition: 200ms all;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      @include underline;
     }
   }
 
@@ -52,12 +67,17 @@
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
+    a {
+      padding-bottom: 4px;
+      @include underline;
     }
   }
 
   @media screen and (max-width: 600px) {
+    &__links {
+      gap: 10px;
+    }
+
     &__container {
       gap: 30px;
     }
