@@ -1,6 +1,14 @@
 <?php
 
-header('Content-Type: application/json');
+// header("Access-Control-Allow-Origin: *");
+// header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type: application/json");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -11,12 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $input = file_get_contents('php://input');
 $data = json_decode($input, true) ?? $_POST;
 
-$fullname = $data["fullname"];
-$phonenumber = $data["phonenumber"];
+$fullname = htmlspecialchars(trim($data["fullname"]), ENT_QUOTES, 'UTF-8');
+$phonenumber = htmlspecialchars(preg_replace('/\D/', '', $data["phonenumber"]), ENT_QUOTES, 'UTF-8');
 
 $errors = [];
 if (empty($phonenumber))
-    $errors['phone'] = 'Телефон обязательное поле!';
+    $errors['phoneNumber'] = 'Телефон обязательное поле!';
 if (empty($fullname))
     $errors['fullname'] = 'Имя обязательно!';
 
@@ -28,8 +36,10 @@ if (!empty($errors)) {
 
 $message = "
     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
-    <p><strong>Имя</strong> - </p><h2>$fullname</h2>
-    <p><strong>Телефон</strong> - </p><h2><a href='tel:$phonenumber'>$phonenumber</a></h2></p>
+    <p><strong>Имя</strong>:</p>
+    <h2>$fullname</h2>
+    <p><strong>Телефон</strong>:</p>
+    <h2><a href='tel:$phonenumber'>$phonenumber</a></h2>
 ";
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -44,41 +54,47 @@ if (!$env) {
     exit;
 }
 
-$mail = new PHPMailer(true);
+try {
+    $mail = new PHPMailer(true);
 
-$mail->isSMTP();
-$mail->CharSet = "UTF-8";
-$mail->SMTPAuth = true;
+    $mail->isSMTP();
+    $mail->CharSet = "UTF-8";
+    $mail->SMTPAuth = true;
 
-$mail->SMTPDebug = 2;
-$mail->Debugoutput = function ($str, $level) {
-    file_put_contents('smtp_debug.log', "$level: $str\n", FILE_APPEND);
-};
+    $mail->SMTPDebug = 2;
+    $mail->Debugoutput = function ($str, $level) {
+        file_put_contents('smtp_debug.log', "$level: $str\n", FILE_APPEND);
+    };
 
-$mail->Host = $env["SMTP_HOST"];
-$mail->SMTPSecure = 'ssl';
-$mail->Port = $env["SMTP_PORT"];
-$mail->Username = $env["SMTP_USERNAME"];
-$mail->Password = $env["SMTP_PASSWORD"];
-$mail->setFrom($env["SMTP_FROM"], 'Заявка с лендинга');
-$mail->addAddress($env["SMTP_TO"]);
-$mail->Subject = 'Седой Кшурт - заявка с формы обратной связи';
-$mail->isHTML(true);
-$mail->Body = $message;
+    $mail->Host = $env["SMTP_HOST"];
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = $env["SMTP_PORT"];
+    $mail->Username = $env["SMTP_USERNAME"];
+    $mail->Password = $env["SMTP_PASSWORD"];
+    $mail->setFrom($env["SMTP_FROM"], 'Заявка с лендинга');
+    $mail->addAddress($env["SMTP_TO"]);
+    $mail->Subject = 'Седой Кшурт - заявка с формы обратной связи';
+    $mail->isHTML(true);
+    $mail->Body = $message;
 
-$ok = false;
+    $ok = false;
 
+    if ($mail->send()) {
+        $ok = true;
+    }
 
-if ($mail->send()) {
-    $ok = true;
-}
+    if ($ok) {
+        http_response_code(200);
+        echo json_encode(['result' => 'Sent letter']);
+        die();
+    } else {
+        http_response_code(422);
+        echo json_encode(['result' => 'false', 'error' => $mail->ErrorInfo]);
+        die();
+    }
 
-if ($ok) {
-    http_response_code(200);
-    echo json_encode(['result' => 'Sent letter']);
-    die();
-} else {
+} catch (Exception $e) {
     http_response_code(422);
-    echo json_encode(['result' => 'false', 'error' => $mail->ErrorInfo]);
+    echo json_encode(['result' => 'false', 'error' => $e->getMessage()]);
     die();
 }
