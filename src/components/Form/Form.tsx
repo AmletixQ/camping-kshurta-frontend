@@ -1,67 +1,114 @@
 import { ChangeEvent, FormEvent, useState } from "react";
-import Input from "../../components/Input/Input";
+import { formatPhoneNumber } from "../../utlis/formatPhoneNumber";
+import { useRequest } from "../../hooks/useRequest";
+
+import Input from "../Input/Input";
+import Modal from "../Modal/Modal";
+import Button from "../Button/Button";
 
 import styles from "./Form.module.scss";
-import { formatPhoneNumber } from "../../utlis/formatPhoneNumber";
 
 const Form = () => {
+  const [errors, setErrors] = useState<{
+    fullname?: string;
+    phoneNumber?: string;
+  }>({});
   const [data, setData] = useState({
     fullname: "",
     phoneNumber: "",
   });
+  const { request, isLoading, modal, closeModal } = useRequest(data);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (!data.fullname || !data.phoneNumber) return;
+    const fieldErrors = {
+      fullname: validateField("fullname", data.fullname),
+      phoneNumber: validateField("phoneNumber", data.phoneNumber),
+    };
 
-    const formData = new FormData();
-    formData.append("fullname", data.fullname);
-    formData.append("phoneNumber", data.phoneNumber);
+    setErrors(fieldErrors);
+    if (Object.values(fieldErrors).some(Boolean)) return;
 
-    await fetch("send.php", {
-      method: "POST",
-      body: formData,
-    });
-
-    setData({ fullname: "", phoneNumber: "" });
+    const { success } = await request();
+    if (success) setData({ fullname: "", phoneNumber: "" });
   };
 
-  const handlePhoneNumberChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const phone = e.target.value.replace(/\D/g, "");
-    if (phone.length > 15) {
-      return;
+  const validateField = (field: keyof typeof data, value: string) => {
+    if (!value.trim()) return "Обязательное поле";
+
+    if (field === "fullname") {
+      if (value.length < 4) return "Слишком короткое имя";
+      if (!/^[A-Za-zА-Яа-яЁё\s\-']+$/u.test(value))
+        return "Только буквы и дефисы";
+    } else if (field === "phoneNumber") {
+      const cleaned = value.replace(/\D/g, "");
+      if (cleaned.length < 11) return "Номер слишком короткий";
     }
 
-    setData((prev) => ({ ...prev, phoneNumber: formatPhoneNumber(phone) }));
+    return "";
   };
 
-  return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <div className={styles.form__inputs}>
-        <Input
-          label="Имя"
-          htmlFor="name"
-          placeholder="Иван Иванов"
-          value={data.fullname}
-          onChange={(e) =>
-            setData((prev) => ({ ...prev, fullname: e.target.value }))
-          }
-          required
-        />
-        <Input
-          type="tel"
-          label="Телефон"
-          htmlFor="phone"
-          placeholder="+7 900 800 00 00"
-          value={data.phoneNumber}
-          onChange={(e) => handlePhoneNumberChange(e)}
-          required
-        />
-      </div>
+  const handleChange =
+    (field: keyof typeof data) => (e: ChangeEvent<HTMLInputElement>) => {
+      const fieldValue = e.target.value;
 
-      <button className={styles.form__button}>Оставить заявку</button>
-    </form>
+      let value: string;
+      if (field === "fullname") {
+        value = fieldValue
+          .replace(/[^A-Za-zА-Яа-яЁё\s\-']/gu, "")
+          .replace(/\s+/g, " ")
+          .trim();
+      } else {
+        value = formatPhoneNumber(fieldValue.replace(/\D/g, "").slice(0, 16));
+      }
+
+      setData((prev) => ({ ...prev, [field]: value }));
+      // if (errors[field]) setData((prev) => ({ ...prev, [field]: "" }));
+    };
+
+  return (
+    <>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.form__inputs}>
+          <Input
+            required
+            label="Имя"
+            htmlFor="name"
+            placeholder="Иван Иванов"
+            value={data.fullname}
+            onChange={handleChange("fullname")}
+            error={errors.fullname}
+            minLength={4}
+          />
+          <Input
+            required
+            type="tel"
+            label="Телефон"
+            htmlFor="phone"
+            placeholder="+7 900 800 00 00"
+            value={data.phoneNumber}
+            onChange={handleChange("phoneNumber")}
+            error={errors.phoneNumber}
+            minLength={11}
+          />
+        </div>
+
+        <Button
+          type="submit"
+          disabled={isLoading}
+          className={styles.form__button}
+        >
+          {isLoading ? "Отправка..." : "Оставить заявку"}
+        </Button>
+      </form>
+      <Modal
+        isOpen={modal.isOpen}
+        onClose={closeModal}
+        type={modal.type}
+        message={modal.message}
+      />
+    </>
   );
 };
 export default Form;

@@ -27,30 +27,6 @@
     }
   }
 
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: fit-content;
-    font-size: var(--h5-size);
-
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-
-    border: none;
-    border-radius: 10px;
-
-    padding: 20px 50px;
-    cursor: pointer;
-
-    transition: 200ms all;
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
   @media screen and (max-width: 1000px) {
     align-items: center;
     justify-content: center;
@@ -58,6 +34,12 @@
 
     &__inputs {
       width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    &__inputs {
+      width: 90%;
     }
   }
 }

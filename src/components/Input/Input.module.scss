@@ -1,23 +1,34 @@
 .input {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 
-  padding: 10px 24px;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-
-  & label {
-    text-align: left;
-    font-size: var(--small-size);
+  &__error {
+    color: darkred;
+    font-size: var(--h6-size);
   }
 
-  & input {
-    background: transparent;
-    border: none;
+  .input__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 
-    padding: 5px 0;
+    padding: 10px 24px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
 
-    font-family: "Inter";
+    & label {
+      text-align: left;
+      font-size: var(--small-size);
+    }
+
+    & input {
+      background: transparent;
+      border: none;
+
+      padding: 5px 0;
+
+      font-family: "Inter";
+    }
   }
 }
