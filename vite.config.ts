@@ -7,6 +7,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: env.VITE_BASE || "/",
+    base:
+      env.VITE_NODE_ENV === "production" ? "/camping-kshurta-frontend" : "/",
   };
 });
