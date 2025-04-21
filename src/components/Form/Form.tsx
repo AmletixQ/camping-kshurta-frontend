@@ -60,7 +60,6 @@ const Form = () => {
         value = fieldValue
           .replace(/[^A-Za-zА-Яа-яЁё\s\-']/gu, "")
           .replace(/\s+/g, " ")
-          .trim();
       } else {
         value = formatPhoneNumber(fieldValue.replace(/\D/g, "").slice(0, 16));
       }
