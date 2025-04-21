@@ -1,8 +1,9 @@
+import styles from "./Status.module.scss";
+
 const Success = () => {
   return (
-    <svg
-      width="121"
-      height="120"
+      <svg
+      className={styles.icon}
       viewBox="0 0 121 120"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -67,9 +67,8 @@
       text-decoration: none;
     }
 
-    a {
+    a:nth-child(1) {
       padding-bottom: 4px;
-      @include underline;
     }
   }
 

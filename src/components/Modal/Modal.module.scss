@@ -1,4 +1,6 @@
 .modal {
+  padding-inline: var(--section-padding);
+
   position: fixed;
   top: 0;
   left: 0;
@@ -37,7 +39,27 @@
     gap: 30px;
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    align-items: center;
+
+    & p {
+      font-size: var(--h5-size);
+      font-weight: 500;
+      line-height: 140%;
+    }
+  }
+
   &__title {
     font-size: var(--h2-size);
+  }
+
+  @media screen and (max-width: 768px) {
+    &__container {
+      padding: 30px;
+    }
   }
 }

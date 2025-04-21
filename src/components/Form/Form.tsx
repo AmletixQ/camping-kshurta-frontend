@@ -8,11 +8,13 @@ import Button from "../Button/Button";
 
 import styles from "./Form.module.scss";
 
+interface IDataErrors {
+  fullname?: string;
+  phoneNumber?: string;
+}
+
 const Form = () => {
-  const [errors, setErrors] = useState<{
-    fullname?: string;
-    phoneNumber?: string;
-  }>({});
+  const [errors, setErrors] = useState<IDataErrors>({});
   const [data, setData] = useState({
     fullname: "",
     phoneNumber: "",
@@ -102,12 +104,7 @@ const Form = () => {
           {isLoading ? "Отправка..." : "Оставить заявку"}
         </Button>
       </form>
-      <Modal
-        isOpen={modal.isOpen}
-        onClose={closeModal}
-        type={modal.type}
-        message={modal.message}
-      />
+      <Modal isOpen={modal.isOpen} onClose={closeModal} type={modal.type} />
     </>
   );
 };
