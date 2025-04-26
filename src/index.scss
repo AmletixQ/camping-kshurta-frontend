@@ -14,9 +14,8 @@
   --h6-size: 18px;
   --small-size: 14px;
 
-  --section-padding: 100px;
-
   --section-gap: 150px;
+  --section-padding: 100px;
   --section-title-gap: 60px;
 
   @media screen and (max-width: 1600px) {
@@ -30,7 +29,7 @@
 
     --section-gap: 100px;
     --section-title-gap: 50px;
-    --section-padding: 80px
+    --section-padding: 80px;
   }
 
   @media screen and (max-width: 1200px) {
@@ -53,7 +52,7 @@
   }
 
   @media screen and (max-width: 420px) {
-    --h1-size: 27px;
+    --h1-size: 26px;
 
     --section-padding: 24px;
     --section-gap: 80px;
@@ -73,6 +72,7 @@
 html {
   background-color: #fef9ed;
   scroll-behavior: smooth;
+  scroll-padding: 20px;
 
   overflow-x: hidden;
 }

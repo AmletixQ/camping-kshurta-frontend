@@ -1,62 +1,110 @@
-import { FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { formatPhoneNumber } from "../../utlis/formatPhoneNumber";
+import { useRequest } from "../../hooks/useRequest";
 
-import Input from "../../components/Input/Input";
-import PhoneInput from "../PhoneInput/PhoneInput";
+import Input from "../Input/Input";
+import Modal from "../Modal/Modal";
+import Button from "../Button/Button";
 
 import styles from "./Form.module.scss";
 
+interface IDataErrors {
+  fullname?: string;
+  phoneNumber?: string;
+}
+
 const Form = () => {
+  const [errors, setErrors] = useState<IDataErrors>({});
   const [data, setData] = useState({
     fullname: "",
     phoneNumber: "",
   });
+  const { request, isLoading, modal, closeModal } = useRequest(data);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (!data.fullname || !data.phoneNumber) return;
+    const fieldErrors = {
+      fullname: validateField("fullname", data.fullname),
+      phoneNumber: validateField("phoneNumber", data.phoneNumber),
+    };
 
-    const formData = new FormData();
-    formData.append("fullname", data.fullname);
-    formData.append("phoneNumber", data.phoneNumber);
+    setErrors(fieldErrors);
+    if (Object.values(fieldErrors).some(Boolean)) return;
 
-    await fetch("send.php", {
-      method: "POST",
-      body: formData,
-    });
-
-    setData({ fullname: "", phoneNumber: "" });
+    const { success } = await request();
+    if (success) setData({ fullname: "", phoneNumber: "" });
   };
 
+  const validateField = (field: keyof typeof data, value: string) => {
+    if (!value.trim()) return "Обязательное поле";
+
+    if (field === "fullname") {
+      if (value.length < 4) return "Слишком короткое имя";
+      if (!/^[A-Za-zА-Яа-яЁё\s\-']+$/u.test(value))
+        return "Только буквы и дефисы";
+    } else if (field === "phoneNumber") {
+      const cleaned = value.replace(/\D/g, "");
+      if (cleaned.length < 11) return "Номер слишком короткий";
+    }
+
+    return "";
+  };
+
+  const handleChange =
+    (field: keyof typeof data) => (e: ChangeEvent<HTMLInputElement>) => {
+      const fieldValue = e.target.value;
+
+      let value: string;
+      if (field === "fullname") {
+        value = fieldValue
+          .replace(/[^A-Za-zА-Яа-яЁё\s\-']/gu, "")
+          .replace(/\s+/g, " ")
+      } else {
+        value = formatPhoneNumber(fieldValue.replace(/\D/g, "").slice(0, 16));
+      }
+
+      setData((prev) => ({ ...prev, [field]: value }));
+      // if (errors[field]) setData((prev) => ({ ...prev, [field]: "" }));
+    };
+
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <div className={styles.form__inputs}>
-        <div className={styles.form__input_container}>
-          <label htmlFor="name">Имя</label>
+    <>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <div className={styles.form__inputs}>
           <Input
-            id="name"
+            required
+            label="Имя"
+            htmlFor="name"
             placeholder="Иван Иванов"
             value={data.fullname}
-            onChange={(e) =>
-              setData((prev) => ({ ...prev, fullname: e.target.value }))
-            }
+            onChange={handleChange("fullname")}
+            error={errors.fullname}
+            minLength={4}
+          />
+          <Input
             required
-          />
-        </div>
-
-        <div className={styles.form__input_container}>
-          <label htmlFor="phonenumber">Телефон</label>
-          <PhoneInput
+            type="tel"
+            label="Телефон"
+            htmlFor="phone"
+            placeholder="+7 900 800 00 00"
             value={data.phoneNumber}
-            onChange={(phonenumber) =>
-              setData({ ...data, phoneNumber: phonenumber })
-            }
+            onChange={handleChange("phoneNumber")}
+            error={errors.phoneNumber}
+            minLength={11}
           />
         </div>
-      </div>
 
-      <button className={styles.form__button}>Оставить заявку</button>
-    </form>
+        <Button
+          type="submit"
+          disabled={isLoading}
+          className={styles.form__button}
+        >
+          {isLoading ? "Отправка..." : "Оставить заявку"}
+        </Button>
+      </form>
+      <Modal isOpen={modal.isOpen} onClose={closeModal} type={modal.type} />
+    </>
   );
 };
 export default Form;

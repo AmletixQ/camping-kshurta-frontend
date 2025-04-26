@@ -1,6 +1,6 @@
 import { anchors } from "../../constants/anchors";
+
 import Container from "../Container/Container";
-import Instagram from "../icons/Instagram/Instagram";
 import Logo from "../icons/Logo/Logo";
 import SmallText from "../SmallText/SmallText";
 
@@ -34,12 +34,8 @@ const Footer = () => {
                 <SmallText>(Наталья)</SmallText>
               </div>
             </div>
-            <Instagram />
           </div>
           <div className={styles.footer__content}>
-            <div className={styles.footer__content_item}>
-              <h5>г. Владикавказ, ул. Проспект Коста, 34</h5>
-            </div>
             <a href="mailto:kshurta.info@gmail.com">kshurta.info@gmail.com</a>
           </div>
         </div>

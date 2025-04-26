@@ -18,10 +18,10 @@ const Accordion: FC<IAccordion> = ({ title, small, description }) => {
             className={styles.accordion__title}
             onClick={() => setOpen((prev) => !prev)}
           >
-            <h3>
+            <h4>
               {title}
               {small && <SmallText>{small}</SmallText>}
-            </h3>
+            </h4>
 
             <div className={styles.accordion__button}>
               <Arrow />
