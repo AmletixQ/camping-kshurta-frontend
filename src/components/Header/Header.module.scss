@@ -46,7 +46,11 @@
     font-family: "Inter";
     line-height: 180%;
 
-    @include underline;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   @media screen and (max-width: 1200px) {
