@@ -1,7 +1,6 @@
 import { anchors } from "../../constants/anchors";
 
 import Container from "../Container/Container";
-import Instagram from "../icons/Instagram/Instagram";
 import Logo from "../icons/Logo/Logo";
 import SmallText from "../SmallText/SmallText";
 
@@ -38,7 +37,6 @@ const Footer = () => {
           </div>
           <div className={styles.footer__content}>
             <a href="mailto:kshurta.info@gmail.com">kshurta.info@gmail.com</a>
-            <Instagram />
           </div>
         </div>
       </Container>

@@ -1,5 +1,4 @@
 import Container from "../Container/Container";
-import Instagram from "../icons/Instagram/Instagram";
 import Logo from "../icons/Logo/Logo";
 
 import { anchors } from "../../constants/anchors";
@@ -24,7 +23,6 @@ const Header = () => {
           <a href="tel:+79094755913" className={styles.header__phonenumber}>
             +7 909 475 59 13
           </a>
-          <Instagram />
         </div>
 
         <BurgerMenu />

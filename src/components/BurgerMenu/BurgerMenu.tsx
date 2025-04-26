@@ -4,7 +4,6 @@ import styles from "./BurgerMenu.module.scss";
 import Container from "../Container/Container";
 import Cross from "../icons/Cross";
 import { anchors } from "../../constants/anchors";
-import Instagram from "../icons/Instagram/Instagram";
 
 const BurgerMenu = () => {
   const [open, setOpen] = useState(false);
@@ -36,7 +35,6 @@ const BurgerMenu = () => {
             </div>
             <div className={styles.menu__contacts}>
               <a href="tel:+79094755913"> +7 909 475 59 13</a>
-              <Instagram />
             </div>
           </div>
         </Container>
