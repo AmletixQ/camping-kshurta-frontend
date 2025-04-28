@@ -1,0 +1,1 @@
+import{j as o}from"./index-B_bP6rg3.js";const e="_container_1zsj5_1",r={container:e},c=({children:n,id:t,className:s})=>o.jsx("section",{id:t,className:`${r.container} ${s}`,children:n});export{c as C};

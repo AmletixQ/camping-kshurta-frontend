@@ -1,1 +1,0 @@
-import{j as s}from"./index-e0aZIl64.js";const a="_anchor_13dbe_1",c="_secondary_13dbe_13",e="_primary_13dbe_16",r={anchor:a,secondary:c,primary:e},y=o=>{const n=o.isSecondary?r.secondary:r.primary;return s.jsx("a",{...o,href:"#form",className:`${r.anchor} ${n}`})};export{y as A};
