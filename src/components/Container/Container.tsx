@@ -8,9 +8,9 @@ interface IContainerProps extends PropsWithChildren {
 
 const Container: FC<IContainerProps> = ({ children, id, className }) => {
   return (
-    <div id={id} className={`${styles.container} ${className}`}>
+    <section id={id} className={`${styles.container} ${className}`}>
       {children}
-    </div>
+    </section>
   );
 };
 export default Container;

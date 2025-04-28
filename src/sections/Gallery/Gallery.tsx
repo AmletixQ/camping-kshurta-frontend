@@ -10,7 +10,12 @@ const Gallery = () => {
       <SectionTitle>Галерея</SectionTitle>
       <div className={styles.gallery}>
         {gallery.map((image, index) => (
-          <img key={index + 1} src={image} alt={`image-${index + 1}`} />
+          <img
+            loading="lazy"
+            key={index + 1}
+            src={image}
+            alt={`image-${index + 1}`}
+          />
         ))}
       </div>
     </Container>

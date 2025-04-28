@@ -7,7 +7,7 @@ import styles from "./Entertainment.module.scss";
 
 const Entertainment = () => {
   return (
-    <div className={styles.entertainment} id="entertainment">
+    <section className={styles.entertainment} id="entertainment">
       <Container>
         <SectionTitle>Досуг и развлечения</SectionTitle>
       </Container>
@@ -16,7 +16,7 @@ const Entertainment = () => {
           <Accordion {...accordion} key={index} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 export default Entertainment;
