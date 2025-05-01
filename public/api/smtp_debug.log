@@ -1,0 +1,712 @@
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e541d95sm243091e87.96 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a0c:16c0:515:1a9::5d8e]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e541d95sm243091e87.96 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e541d95sm243091e87.96 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e541d95sm243091e87.96 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 17:44:04 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <ub0n4X5XGKWuVoVrpEfUBWjbu1ZM1NChTdR8zuL8Hs@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902032'>79995902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1744998247 2adb3069b0e04-54d6e541d95sm243091e87.96 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e541d95sm243091e87.96 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 38308e7fff4ca-3109084de05sm2900651fa.100 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [5.34.215.244]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 38308e7fff4ca-3109084de05sm2900651fa.100 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 38308e7fff4ca-3109084de05sm2900651fa.100 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 38308e7fff4ca-3109084de05sm2900651fa.100 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:08:29 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <NEhQak7GFI5hhvcM8YVTBlrSNTMRLvSGwxaRn26p9s@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902032'>79995902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1744999711 38308e7fff4ca-3109084de05sm2900651fa.100 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 38308e7fff4ca-3109084de05sm2900651fa.100 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e542a3csm246318e87.102 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [5.34.215.244]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e542a3csm246318e87.102 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e542a3csm246318e87.102 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e542a3csm246318e87.102 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:16:42 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <eO7hzFwT6A2DW1RqRbihcxTKLoapzB9keeJu5Zvann8@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902032'>79995902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745000206 2adb3069b0e04-54d6e542a3csm246318e87.102 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e542a3csm246318e87.102 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 38308e7fff4ca-3109084df4bsm2875281fa.102 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [5.34.215.244]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 38308e7fff4ca-3109084df4bsm2875281fa.102 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 38308e7fff4ca-3109084df4bsm2875281fa.102 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 38308e7fff4ca-3109084df4bsm2875281fa.102 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:17:24 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <LxBnZUZvYkMYeKWEksSW2vTIeMXaKRPrJxfK0EdXgA@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902032'>79995902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745000246 38308e7fff4ca-3109084df4bsm2875281fa.102 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 38308e7fff4ca-3109084df4bsm2875281fa.102 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e52467esm249112e87.16 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a0c:16c0:515:1a9::5d8e]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e52467esm249112e87.16 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e52467esm249112e87.16 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e52467esm249112e87.16 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:21:38 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <2NeM9hlLfA8gvOYpKV6abbSQpHcV8UzoWTB6MASVSU@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902032'>79995902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745000501 2adb3069b0e04-54d6e52467esm249112e87.16 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e52467esm249112e87.16 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e524689sm251401e87.13 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a0c:16c0:515:1a9::5d8e]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e524689sm251401e87.13 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e524689sm251401e87.13 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e524689sm251401e87.13 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:22:07 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <JimfMZDZsgisQnrlupEkFvQFXVkQh1GGwLZu3h4zUI@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902032'>79995902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745000529 2adb3069b0e04-54d6e524689sm251401e87.13 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e524689sm251401e87.13 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e5f516bsm248755e87.221 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [5.34.215.244]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e5f516bsm248755e87.221 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e5f516bsm248755e87.221 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e5f516bsm248755e87.221 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:47:00 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <UfQclfNL0YFBpxg6Org9qCGvRbPM5wqr8hoxMxUlO0@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Test</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:12345678901'>12345678901</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745002022 2adb3069b0e04-54d6e5f516bsm248755e87.221 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e5f516bsm248755e87.221 - gsmtp
+
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e5247afsm251413e87.24 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [5.34.215.244]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e5247afsm251413e87.24 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e5247afsm251413e87.24 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e5247afsm251413e87.24 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:47:12 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <5MvQMQl3XDpU5QjdctVbrN7ckqZL93b9q54htg@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Наза</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79995902302'>79995902302</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745002034 2adb3069b0e04-54d6e5247afsm251413e87.24 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e5247afsm251413e87.24 - gsmtp
+
+2: Invalid hostentry:  
+2: SERVER -> CLIENT: 220 smtp.gmail.com ESMTP 2adb3069b0e04-54d6e52463asm254995e87.23 - gsmtp
+
+1: CLIENT -> SERVER: EHLO localhost
+
+2: SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2a0c:16c0:515:1a9::5d8e]
+250-SIZE 35882577
+250-8BITMIME
+250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+250-ENHANCEDSTATUSCODES
+250-PIPELINING
+250-CHUNKING
+250 SMTPUTF8
+
+1: CLIENT -> SERVER: AUTH LOGIN
+
+2: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+
+1: CLIENT -> SERVER: [credentials hidden]
+2: SERVER -> CLIENT: 235 2.7.0 Accepted
+
+1: CLIENT -> SERVER: MAIL FROM:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.0 OK 2adb3069b0e04-54d6e52463asm254995e87.23 - gsmtp
+
+1: CLIENT -> SERVER: RCPT TO:<kshurta.requests@gmail.com>
+
+2: SERVER -> CLIENT: 250 2.1.5 OK 2adb3069b0e04-54d6e52463asm254995e87.23 - gsmtp
+
+1: CLIENT -> SERVER: DATA
+
+2: SERVER -> CLIENT: 354 Go ahead 2adb3069b0e04-54d6e52463asm254995e87.23 - gsmtp
+
+1: CLIENT -> SERVER: Date: Fri, 18 Apr 2025 18:50:40 +0000
+
+1: CLIENT -> SERVER: To: kshurta.requests@gmail.com
+
+1: CLIENT -> SERVER: From: =?UTF-8?B?0JfQsNGP0LLQutCwINGBINC70LXQvdC00LjQvdCz0LA=?= <kshurta.requests@gmail.com>
+
+1: CLIENT -> SERVER: Subject: =?UTF-8?B?0KHQtdC00L7QuSDQmtGI0YPRgNGCIC0g0LfQsNGP0LLQutCwINGBINGE0L4=?=
+
+1: CLIENT -> SERVER:  =?UTF-8?B?0YDQvNGLINC+0LHRgNCw0YLQvdC+0Lkg0YHQstGP0LfQuA==?=
+
+1: CLIENT -> SERVER: Message-ID: <dEd4Ks0JwBnki2QrPITyQMjQ5CSVRQpk30BxIqmE@localhost>
+
+1: CLIENT -> SERVER: X-Mailer: PHPMailer 6.1.5 (https://github.com/PHPMailer/PHPMailer)
+
+1: CLIENT -> SERVER: MIME-Version: 1.0
+
+1: CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+
+1: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER:     <h2><strong>Сообщение с лендинга</strong>. Заявка с формы обратной связи</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Имя</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2>Назаров</h2>
+
+1: CLIENT -> SERVER:     <p><strong>Телефон</strong>:</p>
+
+1: CLIENT -> SERVER:     <h2><a href='tel:79994902032'>79994902032</a></h2>
+
+1: CLIENT -> SERVER: 
+
+1: CLIENT -> SERVER: .
+
+2: SERVER -> CLIENT: 250 2.0.0 OK  1745002242 2adb3069b0e04-54d6e52463asm254995e87.23 - gsmtp
+
+1: CLIENT -> SERVER: QUIT
+
+2: SERVER -> CLIENT: 221 2.0.0 closing connection 2adb3069b0e04-54d6e52463asm254995e87.23 - gsmtp
+
