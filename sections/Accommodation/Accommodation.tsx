@@ -28,7 +28,7 @@ const Accommodation = () => {
           </div>
         </div>
         <img
-          src={"/images/accommodation.png"}
+          src={"/images/accommodation.webp"}
           alt="Man with cup"
           className={styles.accommodation__image}
         />

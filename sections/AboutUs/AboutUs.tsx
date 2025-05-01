@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className={styles.aboutUs}>
         <Image
           className={styles.aboutUs__image}
-          src={"/images/aboutUs.png"}
+          src={"/images/aboutUs.webp"}
           alt="beautiful image"
           width={840}
           height={760}

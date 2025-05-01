@@ -15,7 +15,7 @@ const Rules = () => {
               ))}
             </div>
           </div>
-          <img src={"/images/rules/first.png"} alt="first-rules-image" />
+          <img src={"/images/rules/first.webp"} alt="first-rules-image" />
         </div>
         <div className={styles.rules__container}>
           <div className={styles.rules__content}>
@@ -26,7 +26,7 @@ const Rules = () => {
               ))}
             </div>
           </div>
-          <img src={"/images/rules/second.png"} alt="second-rules-image" />
+          <img src={"/images/rules/second.webp"} alt="second-rules-image" />
         </div>
       </div>
     </Container>

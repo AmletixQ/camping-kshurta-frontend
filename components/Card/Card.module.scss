@@ -35,7 +35,7 @@
 
   @for $i from 1 through 3 {
     &:nth-child(#{$i}) {
-      background: url("/images/conditions/card-#{$i}.png");
+      background: url("/images/conditions/card-#{$i}.webp");
       background-position: center;
       background-size: cover;
     }

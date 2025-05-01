@@ -12,7 +12,7 @@ const Gallery = () => {
           <img
             loading="lazy"
             key={index + 1}
-            src={`/images/gallery/image-${index + 1}.png`}
+            src={`/images/gallery/image-${index + 1}.webp`}
             alt={`image-${index + 1}`}
           />
         ))}

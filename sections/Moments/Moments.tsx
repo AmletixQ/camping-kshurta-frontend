@@ -21,7 +21,7 @@ const Moments = () => {
         </div>
         <img
           className={styles.moments__image}
-          src="/images/moments.png"
+          src="/images/moments.webp"
           alt="moments"
         />
       </div>

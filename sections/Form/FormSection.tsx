@@ -17,7 +17,7 @@ const FormSection = () => {
 
           <Form />
         </div>
-        <img src="/images/form-image.png" alt="" />
+        <img src="/images/form-image.webp" alt="" />
       </div>
     </Container>
   );

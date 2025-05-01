@@ -24,7 +24,7 @@ export default function Home() {
         <link
           rel="icon"
           type="image/png"
-          href="/images/favicons/favicon-96x96.png"
+          href="/images/favicons/favicon-96x96.webp"
           sizes="96x96"
         />
         <link
@@ -36,7 +36,7 @@ export default function Home() {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/images/favicons/apple-touch-icon.png"
+          href="/images/favicons/apple-touch-icon.webp"
         />
         <link rel="manifest" href="/images/favicons/site.webmanifest" />
 
@@ -61,7 +61,7 @@ export default function Home() {
         <meta property="og:url" content="https://camping-kshurta.ru" />
         <meta
           property="og:image"
-          content="https://camping-kshurta.ru/images/accommodation.png"
+          content="https://camping-kshurta.ru/images/accommodation.webp"
         />
         <meta property="og:site_name" content="Седой Кшурт" />
 
